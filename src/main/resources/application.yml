@@ -1,0 +1,33 @@
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: <REPLACE WITH YOUR INFO>
+    password: <REPLACE WITH YOUR INFO>
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+  application:
+    name: booking-checker
+
+server:
+  port: 9091
+
+booking:
+  url: https://booking.uz.gov.ua/en
+  from: 2218000 <REPLACE WITH YOUR INFO>
+  to: 2200200 <REPLACE WITH YOUR INFO>
+  date: 2018-03-11 <REPLACE WITH YOUR INFO>
+  time: 00:00 <REPLACE WITH YOUR INFO>
+  trainToFind: 715Л <REPLACE WITH YOUR INFO>
+  mailRecipients: <REPLACE WITH YOUR INFO>
+
+logging:
+  level:
+    org.alexkov.bookingchecker.BookingClient: WARN
